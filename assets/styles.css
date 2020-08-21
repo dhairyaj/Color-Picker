@@ -1,15 +1,18 @@
+/* Global browser settings */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Changes for the whole document body */
 body {
     min-height: 100vh;
     width: 100%;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Main container */
 .container {
     min-height: 97vh;
     width: 100%;
@@ -17,10 +20,11 @@ body {
     flex-wrap: wrap;
 }
 
+/* Each color area */
 .color {
     position: relative;
     flex: 20%;
-    min-height: 300px;
+    min-height: 150px;
     cursor: pointer;
     transition: .4s linear;
 }
@@ -29,6 +33,7 @@ body {
     filter: brightness(87%);
 }
 
+/* For the hexcode of the color */
 .hexcode {
     position: absolute;
     bottom: 10%;
@@ -39,6 +44,7 @@ body {
     letter-spacing: 3px;
 }
 
+/* The refresh button */
 .change {
     position: fixed;
     top: 20px;
@@ -62,6 +68,7 @@ button .material-icons {
     font-weight: 700;
 }
 
+/* The alert message */
 .copyalert {
     position: fixed;
     top: 20px;
@@ -71,14 +78,13 @@ button .material-icons {
     background: rgba(0, 0, 0, 0.5);
     padding: 15px 40px;
     font-size: 18px;
-    min-width: 400px;
+    min-width: 300px;
     text-align: center;
     border-radius: 60px;
     display: none;
 }
 
-
-
+/* Footer */
 footer {
     min-height: 3vh;
     width: 100%;
@@ -89,6 +95,7 @@ footer p {
     align-self: center;
 }
 
+/* Heart icon */
 .fas {
     color: red;
     animation: pound .4s infinite alternate;
@@ -97,5 +104,12 @@ footer p {
 @keyframes pound {
     to{
         transform: scale(1.1);
+    }
+}
+
+/* Screen Responsiveness */
+@media screen and (max-width: 800px) {
+    .color {
+        flex: 100%;
     }
 }
