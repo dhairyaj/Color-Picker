@@ -1,0 +1,101 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    min-height: 97vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color {
+    position: relative;
+    flex: 20%;
+    min-height: 300px;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+.color:hover {
+    filter: brightness(87%);
+}
+
+.hexcode {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.change {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+.change:hover {
+    transform: rotate(180deg) scale(1.1);
+}
+
+button .material-icons {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.copyalert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 40px;
+    font-size: 18px;
+    min-width: 400px;
+    text-align: center;
+    border-radius: 60px;
+    display: none;
+}
+
+
+
+footer {
+    min-height: 3vh;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    align-self: center;
+}
+
+.fas {
+    color: red;
+    animation: pound .4s infinite alternate;
+}
+
+@keyframes pound {
+    to{
+        transform: scale(1.1);
+    }
+}
